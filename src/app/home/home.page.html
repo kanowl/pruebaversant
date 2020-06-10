@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      PruebaVersant
+      Welcome
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,15 +9,22 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Dictation</ion-card-title>
-      <ion-card-subtitle>Section G</ion-card-subtitle>
+      <ion-button (click)="logmeIn()">Practice</ion-button>
     </ion-card-header>
-  
-    <ion-card-content>
-      Dictation is one of the exercises in the VERSANT Placement Test; that's why you will need
-      to practice your listening and writing skills. In this exercise, you will be able to solve
-      some exercises that will diagnose your possible score in VERSANT. This is just a mock test of 
-      the real exam, therefore, scores are estima
-    </ion-card-content>
+  </ion-card> 
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)="logmeIn()">DashBoard</ion-button>
+    </ion-card-header>
+  </ion-card> 
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)="logmeIn()">Settings</ion-button>
+    </ion-card-header>
+  </ion-card> 
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)="logmeIn()">Sign Out</ion-button>
+    </ion-card-header>
   </ion-card> 
 </ion-content>
