@@ -22,9 +22,13 @@
       <ion-button (click)="logmeIn()">Settings</ion-button>
     </ion-card-header>
   </ion-card> 
-  <ion-card>
-    <ion-card-header>
-      <ion-button (click)="logmeIn()">Sign Out</ion-button>
-    </ion-card-header>
-  </ion-card> 
 </ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button (click)="logmeIn()">SignOut</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
