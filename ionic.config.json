@@ -1,0 +1,7 @@
+{
+  "name": "PruebaVersant",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
