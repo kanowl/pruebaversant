@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title> 
       Welcome
     </ion-title>
   </ion-toolbar>
@@ -8,18 +8,21 @@
 
 <ion-content>
   <ion-card>
-    <ion-card-header>
-      <ion-button (click)="logmeIn()">Practice</ion-button>
+    <ion-card-header>  
+      <ion-button color="secondary"
+      (click)="logmeIn()">Practice</ion-button>
     </ion-card-header>
   </ion-card> 
   <ion-card>
     <ion-card-header>
-      <ion-button (click)="logmeIn()">DashBoard</ion-button>
+      <ion-button color="secondary"
+      (click)="logmeIn()">DashBoard</ion-button>
     </ion-card-header>
   </ion-card> 
   <ion-card>
     <ion-card-header>
-      <ion-button (click)="logmeIn()">Settings</ion-button>
+      <ion-button color="secondary"
+      (click)="logmeIn()">Settings</ion-button>
     </ion-card-header>
   </ion-card> 
 </ion-content>
@@ -27,7 +30,8 @@
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-button (click)="logmeIn()">SignOut</ion-button>
+      <ion-button color="danger"
+      (click)="logmeIn()">SignOut</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-footer>

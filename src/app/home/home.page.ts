@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
   constructor(private router: Router) {}
@@ -12,4 +12,5 @@ export class HomePage implements OnInit {
   logMeIn () {
     //code to access to practice goes here
     this.router.navigate(['/practice'])
-   }} 
+  }
+} 
