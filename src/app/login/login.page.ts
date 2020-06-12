@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
   constructor(private router: Router) { }
   ngOnInit() {}
-  logMeIn () {
-   //code for loggin in user goes here
-   this.router.navigate(['/home'])
+  login () {
+    this.router.navigate(['/home'])
   }
 }
