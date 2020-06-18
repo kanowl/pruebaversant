@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+const alertCtrl = document.querySelector('ion-alert-controller');
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -10,7 +11,16 @@ const routes: Routes = [
   },
   {
     path: 'practice',
-    loadChildren: () => import('./practice/practice.module').then( m => m.PracticePageModule)
+    children: [
+
+      { path: 'dictation',
+      
+        loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
+      },
+    ]
+    
+  
+  
   },
   {
     path: 'dashboard',
@@ -20,10 +30,7 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
-  {
-    path: 'dictation',
-    loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
-  },
+  
 ];
 
 @NgModule({

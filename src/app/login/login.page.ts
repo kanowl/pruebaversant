@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { AngularFireAuth } from '@angular/fire/auth';
+const alertCtrl = document.querySelector('ion-alert-controller');
 
 @Component({
   selector: 'app-login',
@@ -27,11 +27,19 @@ export class LoginPage implements OnInit {
 
     if (user.user.email) {
       this.router.navigate(['/home']);
-    } else {
-      alert('Login failed!');
+    } 
+    else
+      {alertCtrl
+        .create({
+          message: 'Login failed!',
+          header: 'Invalid Information',
+          buttons: ['Ok'] 
+      }).
+        then(((alertElement: { present: () => void; }) => {alertElement.present();
+    }));
     }
+  return;;
   }
-
   async register () {
     const user = await this.ngFireAuth.createUserWithEmailAndPassword(this.user.email, this.user.password);
 

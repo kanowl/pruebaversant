@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+const alertCtrl = document.querySelector('ion-alert-controller');
 
 @Component({
   selector: 'app-root',
