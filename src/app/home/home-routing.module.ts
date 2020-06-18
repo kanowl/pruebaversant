@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 
 const routes: Routes = [
-  { path: '',redirectTo: 'home', pathMatch: 'full'},
-  { path: '',redirectTo: 'practice',
-  loadChildren: './practice/practice.module.ts'},
+  {
+    path: '',
+    component: HomePage,
+  }
 ];
 
 @NgModule({

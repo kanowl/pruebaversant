@@ -14,13 +14,16 @@ export class LoginPage implements OnInit {
     email: '',
     password: ''
   }
-  
-  constructor(private router: Router,
+    constructor(private router: Router,
               public ngFireAuth: AngularFireAuth) { }
-  
   ngOnInit() { 
   }
   
+  logMeIn () {
+    //code for loggin in user goes here
+    this.router.navigate(['/home'])
+   }
+
   async login () {
     const user = await this.ngFireAuth.signInWithEmailAndPassword(this.user.email, this.user.password);
     console.log(user);
