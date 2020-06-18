@@ -27,19 +27,11 @@ export class LoginPage implements OnInit {
 
     if (user.user.email) {
       this.router.navigate(['/home']);
-    } 
-    else
-      {alertCtrl
-        .create({
-          message: 'Login failed!',
-          header: 'Invalid Information',
-          buttons: ['Ok'] 
-      }).
-        then(((alertElement: { present: () => void; }) => {alertElement.present();
-    }));
+    } else {
+      alert('Login failed!');
     }
-  return;;
   }
+
   async register () {
     const user = await this.ngFireAuth.createUserWithEmailAndPassword(this.user.email, this.user.password);
 
@@ -50,5 +42,5 @@ export class LoginPage implements OnInit {
     } else {
       alert('Registration failed!')
     }
-  }
+}
 }

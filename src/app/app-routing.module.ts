@@ -30,6 +30,11 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
+  {
+    path: 'dictation',
+    loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
+  },
+
   
 ];
 
