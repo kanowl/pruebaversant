@@ -12,14 +12,14 @@ const routes: Routes = [
   {
     path: 'practice',
     children: [
-
-      { path: 'dictation',
-      
-        loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
+      { path: "",   
+        loadChildren: () => import('./practice/practice.module').then( m => m.PracticePageModule)
       },
+      {
+        path: "dictacion",
+        loadChildren: () => import('./dictation/dictation-routing.module').then(m =>m.DictationPageRoutingModule)
+      }
     ]
-    
-  
   
   },
   {
