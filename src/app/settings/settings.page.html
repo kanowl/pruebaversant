@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>settings</ion-title>
+  <ion-col width-50 style="text-align: center">
+    <ion-title>SETTINGS</ion-title>
+  </ion-col>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+
+<ion-content>
+  <ion-item>
+    <ion-input placeholder="Name"></ion-input>
+   </ion-item> 
+  <ion-item>
+    <ion-input placeholder="Username"></ion-input>
+   </ion-item> 
+   <ion-item>
+    <ion-input placeholder="Email"></ion-input>
+   </ion-item> 
+   <ion-item>
+    <ion-input placeholder="Password"></ion-input>
+   </ion-item>
+   <ion-button>Submit</ion-button> 
 </ion-content>
+
+
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button color="danger"> 
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-button> 
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Practice</ion-title>
+    <ion-col width-50 style="text-align: center">
+    <ion-title>PRACTICE</ion-title>
+  </ion-col>
   </ion-toolbar>
 </ion-header>
 
@@ -18,10 +20,13 @@
   </ion-card>
 </ion-content>
 
+
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-button (click)="logmeIn()">BACK</ion-button>
+      <ion-button color="danger"> 
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-button> 
     </ion-title>
   </ion-toolbar>
 </ion-footer>

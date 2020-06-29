@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Dashboard</ion-title>
+    <ion-col width-50 style="text-align: center">
+    <ion-title>DASHBOARD</ion-title>
+  </ion-col>
   </ion-toolbar>
 </ion-header>
 
@@ -17,3 +19,29 @@
 ></circle-progress>
 </ion-content>
 
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>  
+      <ion-button color="secondary"
+      (click)="Achievements()">Achievements</ion-button>
+    </ion-card-header>
+  </ion-card> 
+  <ion-card>
+    <ion-card-header>
+      <ion-button color="secondary"
+      (click)="Puzzle()">Puzzle</ion-button>
+    </ion-card-header>
+  </ion-card> 
+
+
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button color="danger"> 
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-button> 
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
