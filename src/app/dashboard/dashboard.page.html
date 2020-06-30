@@ -17,19 +17,47 @@
   [animation]="true"
   [animationDuration]="300" 
 ></circle-progress>
+
+
+<ion-card>
+  <ion-row>
+    <ion-card-content>
+      <ion-text>
+        Your current GSE level is  
+        <ion-note> 
+          [30]
+        </ion-note>
+      </ion-text>
+      </ion-card-content>
+  </ion-row>
+</ion-card>
+
+<ion-card>
+  <ion-row>
+    <ion-card-content>
+      <ion-text>
+        Your current CEFR level is  
+        <ion-note>
+           [A2]
+        </ion-note>
+      </ion-text>
+      </ion-card-content>
+  </ion-row>
+</ion-card>
+
 </ion-content>
 
 
 <ion-content>
   <ion-card>
     <ion-card-header>  
-      <ion-button color="secondary"
+      <ion-button color="primary"
       (click)="Achievements()">Achievements</ion-button>
     </ion-card-header>
   </ion-card> 
   <ion-card>
     <ion-card-header>
-      <ion-button color="secondary"
+      <ion-button color="primary"
       (click)="Puzzle()">Puzzle</ion-button>
     </ion-card-header>
   </ion-card> 

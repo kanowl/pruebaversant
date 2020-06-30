@@ -5,14 +5,9 @@ const alertCtrl = document.querySelector('ion-alert-controller');
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full' },
   {path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { 
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m=> m.LoginPageModule)
-  },
-  {
-    path: 'practice',
-    children: [
-      { path: "",   
+  {path: 'achievements', loadChildren: () => import('./achievements/achievements.module').then( m => m.AchievementsPageModule)},
+  {path: 'login',loadChildren: () => import('./login/login.module').then( m=> m.LoginPageModule)},
+  {path: 'practice',children: [{ path: "",   
         loadChildren: () => import('./practice/practice.module').then( m => m.PracticePageModule)
       },
       {

@@ -6,18 +6,64 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+<ion-card-content>
+<ion-text>
+  Listen to the audio and write down what you hear, if 
+  you want to repeat the audio, it will cost you 1 point
+</ion-text>
+</ion-card-content>  
+
   <ion-card>
     <ion-item>
       <ion-input placeholder="Answer"></ion-input>
-     </ion-item> 
-    <ion-button><ion-icon name="play-outline"></ion-icon></ion-button>
-    <ion-button><ion-icon name="pause-circle-outline"></ion-icon></ion-button>
-    <ion-button><ion-icon name="stop-circle-outline"></ion-icon></ion-button>
-    <ion-button><ion-icon name="reload-outline"></ion-icon></ion-button>
-    <ion-button>Submit</ion-button>
+     </ion-item>
+     <br>
+
+     <ion-row>
+      <ion-col width-50 style="text-align: center">
+        <ion-button><ion-icon name="play-outline"></ion-icon></ion-button>
+        <ion-button><ion-icon name="pause-circle-outline"></ion-icon></ion-button> 
+        <ion-button><ion-icon name="stop-circle-outline"></ion-icon></ion-button>
+        <ion-button><ion-icon name="reload-outline"></ion-icon></ion-button>
+      </ion-col>
+      </ion-row>
+    <br>
+    <ion-row>
+      <ion-col width-50 style="text-align: center">  
+    <ion-button> Submit </ion-button>
+    <ion-button> Cancel </ion-button>
+  </ion-col>
+</ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-row>
+      <ion-card-content>
+        <ion-text>
+          Score 
+          <ion-note> 
+            [100]
+          </ion-note>
+        </ion-text>
+        </ion-card-content>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-row>
+      <ion-card-content>
+        <ion-text>
+          Total Score 
+          <ion-note> 
+            [10000]
+          </ion-note>
+        </ion-text>
+        </ion-card-content>
+    </ion-row>
   </ion-card>
 </ion-content>
+
 
 
 <ion-footer [translucent]="true">
