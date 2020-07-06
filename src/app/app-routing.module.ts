@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
 const alertCtrl = document.querySelector('ion-alert-controller');
 
 const routes: Routes = [

@@ -16,7 +16,7 @@
     </ion-card-header>
   </ion-col>
   
-    <ion-card-content>
+    <ion-card-content  width-50 style="text-align: center">
       <ion-item>
        <ion-input [(ngModel)]="user.email" placeholder="Username"></ion-input>
       </ion-item> 
@@ -25,8 +25,16 @@
        <ion-input [(ngModel)]="user.password" placeholder="Password" type="Password"></ion-input>
       </ion-item>
       <br>
-      <ion-button expand="block" color="secondary" (click)="login()">Login</ion-button>
-      <ion-button expand="block" color="primary" (click)="register()">Register</ion-button>
+      
+      
+      
+        <ion-row width-50 style="text-align: center" class="center">
+      <ion-button shape="round" color="secondary" (click)="login()">Login</ion-button>
+      <ion-button shape="round" color="primary" (click)="register()">Sign in</ion-button>
+      </ion-row> 
+    
+  
+
     </ion-card-content>
   </ion-card>
 
