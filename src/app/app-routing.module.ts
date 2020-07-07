@@ -5,18 +5,25 @@ const alertCtrl = document.querySelector('ion-alert-controller');
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full' },
-  {path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  {path: 'achievements', loadChildren: () => import('./achievements/achievements.module').then( m => m.AchievementsPageModule)},
-  {path: 'login',loadChildren: () => import('./login/login.module').then( m=> m.LoginPageModule)},
-  {path: 'practice',children: [{ path: "",   
-        loadChildren: () => import('./practice/practice.module').then( m => m.PracticePageModule)
-      },
-      {
-        path: "dictacion",
-        loadChildren: () => import('./dictation/dictation-routing.module').then(m =>m.DictationPageRoutingModule)
-      }
-    ]
-  
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'achievements',
+    loadChildren: () => import('./achievements/achievements.module').then( m => m.AchievementsPageModule)
+  },
+  {
+    path: 'practice',
+    loadChildren: () => import('./practice/practice.module').then( m => m.PracticePageModule)
+  },
+  {
+    path: 'dictation',
+    loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
   },
   {
     path: 'dashboard',
@@ -26,12 +33,7 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
-  {
-    path: 'dictation',
-    loadChildren: () => import('./dictation/dictation.module').then( m => m.DictationPageModule)
-  },
-
-  
+ 
 ];
 
 @NgModule({
