@@ -11,20 +11,20 @@
 <ion-content>
   <ion-card>
     <ion-card-header>  
-      <ion-button color="primary"
-      (click)="Practice()">Practice</ion-button>
+      <ion-button routerLink="/practice" color="primary" 
+      >Practice</ion-button>
     </ion-card-header>
     </ion-card> 
   <ion-card>
     <ion-card-header>
-      <ion-button color="primary"
-      (click)="Dashboard()">Dashboard</ion-button>
+      <ion-button routerLink="/dashboard" color="primary"
+      >Dashboard</ion-button>
     </ion-card-header>
   </ion-card> 
   <ion-card>
     <ion-card-header>
-      <ion-button color="primary"
-      (click)="Settings()">Settings</ion-button>
+      <ion-button routerLink="/settings" color="primary"
+      >Settings</ion-button>
     </ion-card-header>
   </ion-card> 
 </ion-content>
@@ -32,8 +32,8 @@
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-button color="danger"
-      button (click)="SignOut()">SignOut</ion-button>
+      <ion-button routerLink="/login" color="danger"
+      >SignOut</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-footer>

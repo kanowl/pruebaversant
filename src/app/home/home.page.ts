@@ -8,9 +8,5 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
   constructor(private router: Router) {}
-  ngOnInit() {}
-  logMeIn () {
-    //code to access to practice goes here
-    this.router.navigate(['/practice'])
-  }
-} 
+    ngOnInit() {}
+   } 

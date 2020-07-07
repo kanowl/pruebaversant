@@ -75,13 +75,13 @@
   <ion-card>
     <ion-card-header>  
       <ion-button color="primary"
-      (click)="Achievements()">Achievements</ion-button>
+      routerLink="/achievements">Achievements</ion-button>
     </ion-card-header>
   </ion-card> 
   <ion-card>
     <ion-card-header>
       <ion-button color="primary"
-      (click)="Puzzle()">Puzzle</ion-button>
+      routerLink="/Puzzle">Puzzle</ion-button>
     </ion-card-header>
   </ion-card> 
 
@@ -90,7 +90,7 @@
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-button color="danger"> 
+      <ion-button routerLink="/home" color="danger"> 
         <ion-icon name="arrow-undo-outline"></ion-icon>
       </ion-button> 
     </ion-title>

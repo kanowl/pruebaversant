@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-card [routerlink]="['/dictation']"> 
+  <ion-card > 
     <ion-card-header> 
-      <ion-button > 
+      <ion-button  routerLink="/dictation" > 
         Dictation
       </ion-button>
         <ion-card-content>
@@ -23,7 +23,7 @@
 <ion-footer [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-button color="danger"> 
+      <ion-button  routerLink="/home" color="danger"> 
         <ion-icon name="arrow-undo-outline"></ion-icon>
       </ion-button> 
     </ion-title>
