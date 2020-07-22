@@ -15,53 +15,66 @@
 </ion-text>
 </ion-card-content>  
 
+
   <ion-card>
-    <ion-item>
-      <ion-input placeholder="Answer"></ion-input>
+    <ion-item *ngFor="let track of Playlist">
+      <ion-input  placeholder="Answer"></ion-input>
      </ion-item>
      <br>
 
-     <ion-row>
-      <ion-col width-50 style="text-align: center">
-        <ion-button><ion-icon name="play-outline"></ion-icon></ion-button>
-        <ion-button><ion-icon name="pause-circle-outline"></ion-icon></ion-button> 
-        <ion-button><ion-icon name="stop-circle-outline"></ion-icon></ion-button>
-        <ion-button><ion-icon name="reload-outline"></ion-icon></ion-button>
-      </ion-col>
+     <ion-row *ngFor="let track of Playlist">
+            <ion-col width-50 style="text-align: center">
+        
+          <ion-button 
+             (click)="Play(track)">
+            <ion-icon name="play-outline"></ion-icon>
+          </ion-button>
+        
+         </ion-col>
       </ion-row>
     <br>
     <ion-row>
       <ion-col width-50 style="text-align: center">  
-    <ion-button> Submit </ion-button>
-    <ion-button> Cancel </ion-button>
+    <ion-button  (click)="Submit"> Submit </ion-button>
+    <ion-button  (click)="Cancel"> Cancel </ion-button>
   </ion-col>
 </ion-row>
   </ion-card>
 
   <ion-card>
-    <ion-row>
-      <ion-card-content>
-        <ion-text>
-          Score 
-          <ion-note> 
-            [100]
-          </ion-note>
-        </ion-text>
-        </ion-card-content>
-    </ion-row>
+    <ion-card-content>
+        <ion-item *ngFor="let track of Playlist"> 
+          Level GSE 
+          <ion-label style="text-align: right;"> 
+            {{track.GSE}} - {{track.Level}}
+          </ion-label>
+        </ion-item>
+    </ion-card-content>
   </ion-card>
+  
   <ion-card>
-    <ion-row>
-      <ion-card-content>
-        <ion-text>
-          Total Score 
-          <ion-note> 
-            [10000]
-          </ion-note>
-        </ion-text>
-        </ion-card-content>
-    </ion-row>
+    <ion-card-content>
+        <ion-item>
+          Score 
+          <ion-label style="text-align: right;">  
+            [100]
+          </ion-label>
+        </ion-item>
+     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+        <ion-item>
+          Total Score 
+          <ion-label style="text-align: right;"> 
+            [10000]
+          </ion-label>
+        </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+
 </ion-content>
 
 
