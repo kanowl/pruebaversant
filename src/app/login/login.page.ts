@@ -9,7 +9,7 @@ const alertCtrl = document.querySelector('ion-alert-controller');
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
- 
+ error = '';
   user = {
     email: '',
     password: ''
@@ -31,6 +31,7 @@ export class LoginPage implements OnInit {
     if (user.user.email) {
       this.router.navigate(['/home']);
     } else {
+      this.error = 'usuario o contraseña incorrecta';
       alert('Login failed!');
     }
   }

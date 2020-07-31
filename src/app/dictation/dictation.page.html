@@ -18,7 +18,7 @@
 
   <ion-card>
     <ion-item *ngFor="let track of Playlist">
-      <ion-input  placeholder="Answer"></ion-input>
+      <ion-input [(ngModel)]="answer"  placeholder="answer"></ion-input>
      </ion-item>
      <br>
 
@@ -35,7 +35,7 @@
     <br>
     <ion-row>
       <ion-col width-50 style="text-align: center">  
-    <ion-button  (click)="Submit"> Submit </ion-button>
+    <ion-button  (click)="Submit(answer)"> Submit </ion-button>
     <ion-button  (click)="Cancel"> Cancel </ion-button>
   </ion-col>
 </ion-row>
@@ -43,12 +43,24 @@
 
   <ion-card>
     <ion-card-content>
+       
+          <ion-label style="text-align: center;"> 
+            {{respuesta}} 
+          </ion-label>
+       
+        
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
         <ion-item *ngFor="let track of Playlist"> 
           Level GSE 
           <ion-label style="text-align: right;"> 
-            {{track.GSE}} - {{track.Level}}
+            {{audio.se}} - {{audio.level}} - {{audio.pista}} - {{audio.texto}}
           </ion-label>
         </ion-item>
+        
     </ion-card-content>
   </ion-card>
   

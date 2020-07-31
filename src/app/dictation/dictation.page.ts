@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Howl } from 'howler';
+import {Audio} from '../Modelo/Audio';
+import { stringify } from 'querystring';
 
 
 export interface track {
@@ -16,9 +18,18 @@ export interface track {
   styleUrls: ['./dictation.page.scss'],
 })
 export class DictationPage implements OnInit {
-  pista= Math.trunc((Math.random() * (6 - 1) + 1));
- folder = './assets/audio/Dictation/30 ';
- name=this.folder.concat (this.pista.toString(),'.mp3');
+ texto;
+ answer;
+ respuesta: String;
+ pista= Math.trunc((Math.random() * (6 - 1) + 1));
+ track = '30';
+ folder = './assets/audio/Dictation/'
+
+
+
+
+
+ audio: Audio = new Audio (this.pista,this.texto, this.track, 30, 'A1' );
 
  Playlist: track [] = [
     {
@@ -32,28 +43,48 @@ export class DictationPage implements OnInit {
 
   ]
 
+ 
 activateTrack: track = null;
 play: Howl = null;
 isplaying = false;
 
+
+
+
 //To play Random Tracks according to GSE
-chooseRandomTrack(tracks: track[]): track {
-  return tracks[Math.floor(Math.random() * tracks.length)];
-  
-}
+
   //Current Track details
   constructor() {
- 
+        
    }
-  ngOnInit() {}
-
+  ngOnInit() {
+    
+    
+  }
+  
+  name=this.folder.concat (this.audio.track,' ',this.pista.toString(),'.mp3');
+ 
+ 
 Play(track: track) 
-  {this.play = new Howl ({src: [this.name], 
+  {    
+    this.play = new Howl ({src: [this.name], 
     onplay: () => {
       this.isplaying = true;
       this.activateTrack = track}
     },);
   this.play.play();
+}
+
+Submit(submit){
+  
+  if (submit == this.audio.texto){
+    this.respuesta = 'Respuesta correcta has ganado puntos';
+  }
+  else {
+    this.respuesta = 'Respuesta incorrecta has perdido puntos';
+  }
+ 
+
 }
 
 }
