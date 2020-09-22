@@ -31,7 +31,15 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },  {
+    path: 'sentencebuilds',
+    loadChildren: () => import('./sentencebuilds/sentencebuilds.module').then( m => m.SentencebuildsPageModule)
   },
+  {
+    path: 'sentencecompletion',
+    loadChildren: () => import('./sentencecompletion/sentencecompletion.module').then( m => m.SentencecompletionPageModule)
+  },
+
  
 ];
 

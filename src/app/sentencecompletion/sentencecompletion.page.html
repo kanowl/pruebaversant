@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-col width-50 style="text-align: center">
-    <ion-title>DICTATION</ion-title>
+    <ion-title>SENTENCE COMPLETION</ion-title>
   </ion-col>
   </ion-toolbar>
 </ion-header>
@@ -10,29 +10,29 @@
 <ion-content>
 <ion-card-content>
 <ion-text>
-  Listen to the audio and write down what you hear, if 
-  you want to repeat the audio, it will cost you 1 point.
+  Type the word that best fits the meaning of
+  the sentence. Type only one word.
 </ion-text>
 </ion-card-content>  
 
+<ion-card>
+  <ion-card-content>
+      <ion-item> 
+        [Sentence] 
+      </ion-item>
+      </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-content>
+        <ion-input  placeholder="Answer"> 
+          </ion-input>     
+  </ion-card-content>
+</ion-card>
+
 
   <ion-card>
-    <ion-item *ngFor="let track of Playlist">
-      <ion-input [(ngModel)]="answer"  placeholder="answer"></ion-input>
-     </ion-item>
-     <br>
 
-     <ion-row *ngFor="let track of Playlist">
-            <ion-col width-50 style="text-align: center">
-        
-          <ion-button 
-             (click)="Play(track)">
-            <ion-icon name="play-outline"></ion-icon>
-          </ion-button>
-        
-         </ion-col>
-      </ion-row>
-    <br>
     <ion-row>
       <ion-col width-50 style="text-align: center">  
     <ion-button  (click)="Submit(answer)"> Submit </ion-button>
@@ -43,20 +43,11 @@
 
   <ion-card>
     <ion-card-content>
+       
           <ion-label style="text-align: center;"> 
             {{respuesta}} 
-          </ion-label>     
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-        <ion-item *ngFor="let track of Playlist"> 
-          Level GSE 
-          <ion-label style="text-align: right;"> 
-            {{audio.se}} - {{audio.level}} - {{audio.pista}} - {{audio.texto}}
           </ion-label>
-        </ion-item>
+       
         
     </ion-card-content>
   </ion-card>
@@ -85,7 +76,6 @@
 
 
 </ion-content>
-
 
 
 <ion-footer [translucent]="true">

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-col width-50 style="text-align: center">
-    <ion-title>DICTATION</ion-title>
+    <ion-title>SENTENCE BUILDS</ion-title>
   </ion-col>
   </ion-toolbar>
 </ion-header>
@@ -10,19 +10,20 @@
 <ion-content>
 <ion-card-content>
 <ion-text>
-  Listen to the audio and write down what you hear, if 
-  you want to repeat the audio, it will cost you 1 point.
+  Listen to to a group of words, then, rearrange this words
+  into a sentence.
+  Ifyou want to repeat the audio, it will cost you 1 point.
 </ion-text>
 </ion-card-content>  
 
 
   <ion-card>
-    <ion-item *ngFor="let track of Playlist">
+    <ion-item>
       <ion-input [(ngModel)]="answer"  placeholder="answer"></ion-input>
      </ion-item>
      <br>
 
-     <ion-row *ngFor="let track of Playlist">
+     <ion-row>
             <ion-col width-50 style="text-align: center">
         
           <ion-button 
@@ -43,15 +44,18 @@
 
   <ion-card>
     <ion-card-content>
+       
           <ion-label style="text-align: center;"> 
             {{respuesta}} 
-          </ion-label>     
+          </ion-label>
+       
+        
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-content>
-        <ion-item *ngFor="let track of Playlist"> 
+        <ion-item > 
           Level GSE 
           <ion-label style="text-align: right;"> 
             {{audio.se}} - {{audio.level}} - {{audio.pista}} - {{audio.texto}}
@@ -85,7 +89,6 @@
 
 
 </ion-content>
-
 
 
 <ion-footer [translucent]="true">

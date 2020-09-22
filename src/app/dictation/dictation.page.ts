@@ -25,10 +25,6 @@ export class DictationPage implements OnInit {
  track = '30';
  folder = './assets/audio/Dictation/'
 
-
-
-
-
  audio: Audio = new Audio (this.pista,this.texto, this.track, 30, 'A1' );
 
  Playlist: track [] = [
@@ -36,14 +32,11 @@ export class DictationPage implements OnInit {
       Name: '30.1',
       Level: 'A2',
       GSE: '30',
-      Path: './assets/audio/Dictation/30 2.mp3',
+      Path: './assets/audio/Dictation/30 1.mp3',
       Text: 'The game is at midnight',
     },
-  
-
   ]
 
- 
 activateTrack: track = null;
 play: Howl = null;
 isplaying = false;

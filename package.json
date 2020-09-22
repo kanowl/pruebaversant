@@ -1,5 +1,5 @@
 {
-  "name": "PruebaVersant",
+  "name": "pruebaversant",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -30,6 +30,7 @@
     "firebase": "^7.15.1",
     "howler": "^2.2.0",
     "ng-circle-progress": "^1.5.1",
+    "query-string": "^6.13.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
